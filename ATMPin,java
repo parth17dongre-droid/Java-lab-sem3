@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class ATMPinVerification {
+    public static void verifyPin(int pin) throws Exception {
+        if (pin != 1234) {
+            throw new Exception("Incorrect PIN entered.");
+        }
+        System.out.println("PIN verified successfully.");
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter 4-digit PIN: ");
+        int pin = scanner.nextInt();
+
+        try {
+            verifyPin(pin);
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        } finally {
+            System.out.println("Verification process completed.");
+            scanner.close();
+        }
+    }
+}
