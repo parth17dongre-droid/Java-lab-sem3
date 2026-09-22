@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ATMPinVerification {
+public class ATM {
     public static void verifyPin(int pin) throws Exception {
         if (pin != 1234) {
             throw new Exception("Incorrect PIN entered.");
